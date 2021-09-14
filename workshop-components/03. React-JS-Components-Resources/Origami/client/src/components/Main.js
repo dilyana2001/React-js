@@ -1,17 +1,13 @@
 import { Component } from 'react';
 import Post from './Post';
-import Aside from './Aside';
 
-
-class Main extends Component{
-    constructor(props){
+class Main extends Component {
+    constructor(props) {
         super(props);
     }
 
-    render(){
-        return  (
-        <div className="app container">
-            <Aside onMenuItemClick={this.props.onMenuItemClick.bind(this)} />
+    render() {
+        return (
             <main className="main">
                 <h1>Soooooooome Heading</h1>
 
@@ -19,14 +15,14 @@ class Main extends Component{
                     {this.props.posts.map(x =>
                         <Post
                             key={x.id}
+                            title={x.title}
                             content={x.content}
                             author={x.author}
                         />
                     )}
                 </div>
             </main>
-        </div>
-    );
+        );
     }
 }
 export default Main;

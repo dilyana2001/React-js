@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import MenuItem from './MenuItem';
-import { NAVIGATION_MENU } from '../constants';
+import { ASIDE_MENU_ITEMS } from '../constants/asideConstants';
 
 const Aside = ({
-    onMenuItemClick}
-) => {
+    onMenuItemClick
+}) => {
     const [currentItem, setCurrentItem] = useState();
 
     const menuItemClickHandler = (id) => {
@@ -15,7 +15,7 @@ const Aside = ({
     return (
         <aside className="aside">
             <ul>
-                {NAVIGATION_MENU.map(x =>
+                {ASIDE_MENU_ITEMS.map(x =>
                     <MenuItem
                         key={x.id}
                         id={x.id}

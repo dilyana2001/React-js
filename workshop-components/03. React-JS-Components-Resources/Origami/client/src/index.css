@@ -48,7 +48,7 @@
 
 /* Link Styles */
 
-nav .listItem a {
+nav .listItem.listItem {
     color: white;
     text-decoration: none;
 }

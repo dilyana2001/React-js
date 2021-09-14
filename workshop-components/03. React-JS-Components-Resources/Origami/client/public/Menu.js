@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import MenuItem from './MenuItem';
-import { NAVIGATION_MENU } from '../constants';
+import MenuItem from '../src/components/MenuItem';
+import { NAVIGATION_MENU } from '../src/constants';
 
 const Menu = () => {
         const [currentItem, setCurrentItem] = useState();

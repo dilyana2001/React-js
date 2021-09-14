@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import MenuItem from './MenuItem';
-import { NAVIGATION_MENU } from '../constants';
+import { HEADER_MENU_ITEMS } from '../constants/headerConstants';
+import { Link } from 'react-router-dom';
 
 const Header = (
 ) => {
@@ -11,13 +11,16 @@ const Header = (
                     <li className="listItem">
                         <img src="/white-origami-bird.png" alt="white origami" />
                     </li>
-                    {NAVIGATION_MENU.map(x =>
-                        <MenuItem
+                    {HEADER_MENU_ITEMS.map(x =>
+                    <Link className="listItem" to={x.goto}>
+                    <MenuItem
                             key={x.id}
                             id={x.id}
                         >
                             {x.text}
                         </MenuItem>
+                    </Link>
+                        
                     )}
                 </ul>
             </nav>

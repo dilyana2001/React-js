@@ -1,11 +1,11 @@
 import MenuItem from './MenuItem';
-import { NAVIGATION_MENU } from '../constants';
+import { FOOTER_MENU_ITEMS } from '../constants/footerConstants';
     
 const Footer = () => {
     return (
         <footer className="footer">
             <ul>
-                {NAVIGATION_MENU.map(x =>
+                {FOOTER_MENU_ITEMS.map(x =>
                     <MenuItem
                         key={x.id}
                         id={x.id}
