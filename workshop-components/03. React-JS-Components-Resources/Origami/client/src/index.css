@@ -250,5 +250,9 @@ h1 {
     font-weight: bold;
 }
 
+.menu-item-selected {
+    background-color: lightgrey;
+}
+
 
 /* Footer Styles */

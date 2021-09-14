@@ -7,10 +7,12 @@ import Footer from './components/Footer';
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       posts: [],
       selectedPost: null
     }
+
   }
 
   componentDidMount() {
@@ -24,11 +26,21 @@ class App extends Component {
     this.setState({ selectedPost: id })
   }
 
+
+  getPosts() {
+    if (!this.state.selectedPost) {
+      return this.state.posts;
+    } else {
+      return [this.state.posts.find(x => x.id == this.state.selectedPost)];
+    }
+  }
+  
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Main posts={this.state.posts} />
+        <Main posts={this.getPosts()} onMenuItemClick={this.onMenuItemClick.bind(this)} />
         <Footer />
       </div>
     );
